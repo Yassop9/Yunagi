@@ -57,7 +57,7 @@ Ce qui le distingue :
 | 📱 **Mobile d'abord** | Site installable, utilisable hors connexion, et application publiée sur iOS et Android. |
 | 📅 **Un agenda des sorties** | Les épisodes d'anime de la semaine et les parutions de tomes du mois, au même endroit. |
 | 📚 **Le suivi au grain fin** | Progression, note et avis **par épisode, par chapitre et par tome**, mangathèque physique comprise. |
-| 🎮 **Des tops qui se jouent** | Classer ses œuvres en duels, à l'aveugle, par élimination ou en tournoi. |
+| 🎮 **Des tops qui se jouent** | Quatre jeux pour classer ses œuvres : Top 10 à l'aveugle, Élimination, Ceci ou cela et Tournoi. |
 | 💬 **Une vraie communauté** | Profils, abonnements, critiques, espace discussion avec débats par camp, et un bot Discord. |
 
 Yunagi est construit **d'abord pour son auteur et ses proches** : une application de fan, faite par un fan, utilisée au quotidien. Les choix de produit en découlent (voir [Principes du produit](#principes-du-produit)).
@@ -253,23 +253,22 @@ La page [`/jeux`](https://yunagi.app/jeux) et l'éditeur de tops transforment le
 - **Image de partage** au format story.
 - 🟡 En cours : créer un top en quelques clics et piocher dans sa collection directement depuis l'éditeur.
 
-### Les modes de jeu
+### Les jeux disponibles ✅
 
-| Mode | Principe | État |
-|---|---|---|
-| **Classer en duels** | deux œuvres à la fois, vous choisissez, jusqu'à ce que la liste soit triée | ✅ |
-| **Top 10 à l'aveugle** | les œuvres arrivent au hasard, vous les placez sans connaître la suite | ✅ (l'enregistrement de l'image de résultat bloque sur Android) |
-| **Élimination** | dix œuvres, on les retire une à une jusqu'à la dernière | ✅ v1 · 🟡 v2 |
-| **Ceci ou cela** | choisir entre deux propositions | ✅ |
-| **Tournoi** | un tableau à élimination directe | ✅ |
-| **Personnages** | listes de jeu composées de personnages | ✅ |
-| **Musiques** | listes de musiques importées depuis une playlist YouTube | ✅ |
-| **« Une œuvre »** | jouer avec les personnages d'une franchise | ✅ |
-| **Tier list** | ranger en paliers, façon TierMaker | 💡 |
+Quatre jeux sont proposés aujourd'hui sur [`/jeux`](https://yunagi.app/jeux) :
+
+| Jeu | Principe |
+|---|---|
+| **Top 10 à l'aveugle** | les œuvres arrivent au hasard une par une : vous les placez dans votre top 10 sans connaître la suite |
+| **Élimination** | dix œuvres, vous les retirez une à une jusqu'à ce qu'il n'en reste qu'une |
+| **Ceci ou cela** | deux propositions à l'écran, vous choisissez votre préférée |
+| **Tournoi** | un tableau à élimination directe, duel après duel, jusqu'au vainqueur |
+
+*Limite connue* : sur Android, l'image de résultat du Top 10 à l'aveugle ne peut pas encore être enregistrée.
 
 ### Idées documentées 💡
 
-Comparer son top avec celui d'un ami, top communautaire agrégé, défis thématiques avec date limite, historique d'un top, suggestions d'oublis (« Tu n'as pas oublié… ? »), un mot par entrée pour justifier le rang, top à taille fixe.
+Mode tier list façon TierMaker, comparer son top avec celui d'un ami, top communautaire agrégé, défis thématiques avec date limite, historique d'un top, suggestions d'oublis (« Tu n'as pas oublié… ? »), un mot par entrée pour justifier le rang, top à taille fixe.
 
 ---
 
@@ -363,7 +362,7 @@ Pour l'équipe : file de modération (avec approbation et refus groupés), signa
 - Sessions révocables : se déconnecter déconnecte vraiment. Un membre actif reste connecté.
 - Retour automatique à la page d'origine après connexion.
 - **Liaison du compte Discord** avec le compte Yunagi.
-- 🟡 **Connexion avec Google et Apple** : développée, en attente de mise en production et de vérification sur le web, iOS et Android.
+- **Connexion avec Google ou Apple**, en plus de l'e-mail. Si l'adresse est déjà utilisée par un compte Yunagi, rien n'est lié en silence : la liaison se fait depuis les paramètres du compte.
 
 ### Rôles
 
@@ -472,21 +471,20 @@ YunaBot apporte Yunagi sur les serveurs Discord.
 | Imports MyAnimeList, Tachimanga, TV Time | ✅ |
 | Agenda anime et manga | ✅ |
 | Notification de sortie d'épisode | 🟡 |
-| Tops et jeux de classement | ✅ (enrichissements en cours) |
+| Tops et 4 jeux de classement | ✅ (enrichissements en cours) |
 | Profils, abonnements, activité, critiques, commentaires, discussions | ✅ |
 | Contributions, modération, points, 12 niveaux, classement saisonnier | ✅ |
 | Actualités | ✅ |
 | Application iOS / Android, PWA, hors-ligne | ✅ |
 | YunaBot | ✅ |
-| Connexion Google et Apple | 🟡 |
+| Connexion Google et Apple | ✅ |
 | E-mails de notification | 🔜 |
 
 ### Chantiers en cours
 
 - 🟡 **Fiches enrichies** — parcours canon (voir quels épisodes sauter), puis épisodes essentiels, ordre de visionnage des films, relations entre personnages et anecdotes « Le saviez-vous ? ».
-- 🟡 **Tops et jeux** — création express, collection dans l'éditeur, mode aveugle, Élimination v2.
+- 🟡 **Tops et jeux** — création express d'un top, accès à sa collection depuis l'éditeur, nouvelle version de l'Élimination.
 - 🟡 **Qualité du catalogue** — rangement des licences, complément automatique des fiches incomplètes (toujours soumis à relecture), dédoublonnage des personnages.
-- 🟡 **Connexion Google et Apple**.
 
 ### Évolutions documentées
 
@@ -517,7 +515,6 @@ YunaBot apporte Yunagi sur les serveurs Discord.
 
 Le catalogue a été amorcé à partir de données **factuelles** issues de sources ouvertes, puis normalisé (genres traduits et dédoublonnés, éditeurs et studios en vocabulaire contrôlé) et enrichi par la communauté :
 
-- **[AniList](https://anilist.co/)** — données factuelles sur les œuvres et les personnages.
 - **[Wikidata](https://www.wikidata.org/)** — données publiées sous licence CC0.
 - **[BnF](https://www.bnf.fr/)** — données bibliographiques, sous Licence ouverte.
 - **[otakugifs.xyz](https://otakugifs.xyz/)** — source du fonds de GIFs de YunaBot.
